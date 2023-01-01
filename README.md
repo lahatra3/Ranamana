@@ -3,7 +3,7 @@
 - Ranamana est un chat bot (web) qui utilise l'api OPENAI.
 - Il est créé avec la technologie [angular](https://angular.io)
 
-[ ] Descriptions:
+- [ ] Descriptions:
 
 ``` Bash
     $ ~ cd namana
@@ -11,8 +11,8 @@
     $ ~ ng serve
 ```
 
-[ ] Remarques: 
-- La version d'angular utilisée de `14.12.0`.
+- [ ] Remarques: 
+  - La version d'angular utilisée de `14.12.0`.
 
 
-- [iTeam-$](https://iteam-s.mg)
+  - [iTeam-$](https://iteam-s.mg)

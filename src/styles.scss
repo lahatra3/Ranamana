@@ -1,1 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Audio';
+    src: url('assets/fonts/Audiowide-Regular.ttf');
+}
+
+*, **::after, *::before {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0e8999;
+    font-size: .7rem;
+    letter-spacing: 1px;
+    background-position: center;
+    height: 100vh;
+    font-family: 'Audio';
+
+    .nom_app {
+        position: absolute;
+        top: 81%;
+        color: #00959a;
+        filter: drop-shadow(3px 3px 3px #d6d4d4e8);
+    }
+
+    @media screen and (min-width: 767px) {
+        .nom_app {
+            font-size: 1.7rem !important;
+        }
+    }
+}
+
+@keyframes fancy_animation {
+    0% {
+        border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+        background: linear-gradient(45deg, #10B9B9 0%, #43CDD6 100%);
+    }
+    
+    50% {
+        border-radius:  30% 60% 70% 40% / 50% 60% 30% 60%;
+        background: linear-gradient(45deg, #089B9B 0%, #43CDD6 100%);
+    }
+
+    100% {
+        border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+        background: linear-gradient(45deg,  #10B9B9 0%, #43CDD6 100%);
+    }
+}
+
+@keyframes voice_animation {
+    0% {
+       opacity: .35;
+        height: 3px; 
+    }
+    100% {
+        opacity: 1;       
+        height: 17px;        
+    }
+}
+
+@keyframes pulse_animation {
+    100% {
+        transform: scale(2.3);
+        opacity: 0;
+    }
+}

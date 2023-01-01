@@ -1,0 +1,75 @@
+.formulaire {
+    background: #ffffff;
+    border-radius: 39px 17px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 11;
+
+    form {
+        div.input_formulaire {
+            input {
+                border: 1px solid #03a9be1f;
+                border-radius: 31px 17px;
+            }
+
+            input::placeholder {
+                opacity: .7;
+            }
+            label {
+                color: #008080;
+                opacity: .7;
+            }
+        }
+
+        div.show_formulaire {
+            label {
+                opacity: .8;
+            }
+        }
+
+        div.button_formulaire {
+            button {
+                color: #ffffff;
+                background: #0e8999;
+            }
+
+            .loader_spinner {
+                position: absolute;
+                top: 0;
+                width: 128px;
+                padding: 2px;
+                color: #00959a;
+                background: #ffffffc2;
+            }
+
+            @media screen and (min-width: 767px) {
+                button {
+                    font-size: .7rem;
+                    letter-spacing: .7px;
+                }
+            }
+        }
+    }
+}
+
+.logo_formulaire {
+    background: linear-gradient(45deg, #10B9B9 0%,#43CDD6 100%);
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transition: all .7s ease-in-out;
+    animation: fancy_animation 7s ease-in-out infinite;
+}
+
+#login_formulaire::before {
+    content: '';
+    position: absolute;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to right top, #008080, #00959a, #00aab5, #01c0d2, #11d6f0);
+    z-index: -10;
+}

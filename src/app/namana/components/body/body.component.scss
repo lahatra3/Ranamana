@@ -1,0 +1,116 @@
+#section_namana::before {
+    content: '';
+    position: absolute;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to right top, #008080, 
+        #00959a, #00aab5, #01c0d2, #11d6f0);
+    z-index: -10;
+}
+
+.section_micro {
+    position: fixed;
+    bottom: 0;
+    background: #f1fafb;
+    border-radius: 17px 17px 0 0;
+    z-index: 1000;
+
+    div {
+        button {
+            box-shadow:  20px 20px 43px #cdd5d5,
+             -20px -20px 43px #ffffff;
+            transition: all .5s ease-in-out;
+            border: none;
+        }
+
+        .button_active_true {
+            background: linear-gradient(145deg, #d9e1e2, #ffffff);
+        }
+
+        .button_active_false {
+            background: linear-gradient(145deg, #ffffff, #d9e1e2);
+        }
+
+        .button_active_true::after, 
+        .button_active_true::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #00959a;
+            border-radius: 50%;
+            z-index: -1;
+            opacity: .7;
+        }
+
+        .button_active_true::before {
+            animation: pulse_animation 2s ease-in-out infinite;
+        }
+
+        .button_active_true::after {
+            animation: pulse_animation 2s 1s ease-in-out infinite;
+        }
+    }
+}
+
+.voice_namana {
+    background: linear-gradient(45deg, #10B9B9 0%,#43CDD6 100%);
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transition: all .7s ease-in-out;
+    animation: fancy_animation 7s ease-in-out infinite;
+
+    #voices {
+        position: absolute;
+        top: 61%;
+        .voice {
+            background: #008080;
+            height: 11px;
+            width: 2px;
+            border-radius: 7px;
+            margin: 0 2px;
+        }
+    
+        .speak {
+            animation: voice_animation 0ms -600ms linear infinite alternate;
+        }
+    
+        .voice:nth-child(1)  { left: 1px; animation-duration: 474ms; }
+        .voice:nth-child(2)  { left: 15px; animation-duration: 433ms; }
+        .voice:nth-child(3)  { left: 29px; animation-duration: 407ms; }
+        .voice:nth-child(4)  { left: 43px; animation-duration: 458ms; }
+        .voice:nth-child(5)  { left: 57px; animation-duration: 400ms; }
+        .voice:nth-child(6)  { left: 71px; animation-duration: 427ms; }
+        .voice:nth-child(7)  { left: 85px; animation-duration: 441ms; }
+        .voice:nth-child(8)  { left: 99px; animation-duration: 419ms; }
+        .voice:nth-child(9)  { left: 113px; animation-duration: 487ms; }
+        .voice:nth-child(10) { left: 127px; animation-duration: 442ms; }
+    }
+}
+
+#textResponse, #textRequest {
+    background-color: #ffffff;
+    border-radius: 30% 70% 70% 30% / 40% 64% 36% 60%;
+}
+
+#textRequest {
+    color: #0d091cd6;
+}
+
+@media screen and (max-width: 767px) {
+    .section_micro {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .section_micro {
+        transform: translateX(-50%);
+        left: 50%;
+    }
+}
